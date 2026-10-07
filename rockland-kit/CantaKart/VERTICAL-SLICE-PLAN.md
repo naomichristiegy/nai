@@ -1,8 +1,10 @@
 # CANTA KART vertical slice: build plan
 
-Studio: ROCKLAND GAMES. Project: `N:\ROCKLAND-GAMES\BerbiceWorld`. Target: 120 fps on the RTX 3080, Lumen off.
+Studio: ROCKLAND GAMES. Project: `<Root>\BerbiceWorld`, where `<Root>` is `N:\ROCKLAND-GAMES` on the pink GeForce desktop
+and the folder `scripts\00-detect-machine.ps1` printed on the MSI laptop (`D:\ROCKLAND-GAMES` or `C:\ROCKLAND-GAMES`).
+Target: 120 fps at 1440p on the desktop RTX 3080, 60 fps at 1080p on the laptop. Lumen off on both.
 The C++ time-trial logic, config, and packaging settings are already in the project. The steps below are
-editor work on the desktop, in order. Each step ends with a commit (never a push).
+editor work on whichever machine you are at, in order. Each step ends with a commit (never a push).
 
 ## 1. Open and compile
 1. Double-click `BerbiceWorld.uproject`. Accept the prompt to build the editor module.
@@ -49,17 +51,18 @@ editor work on the desktop, in order. Each step ends with a commit (never a push
 5. If WMF refuses the stream, check the TLS certificate on port 8443 is one Windows trusts; a self-signed certificate blocks playback. Fallback: enable the **Electra** media player plugin and retry.
 6. Commit.
 
-## 6. Performance pass (120 fps target)
+## 6. Performance pass (120 fps desktop, 60 fps laptop)
 1. `stat fps`, `stat unit` in PIE. Lumen is already off via config; verify Project Settings → Rendering shows Global Illumination = None, Reflections = None.
 2. Landscape LOD distribution 1.75, road spline meshes LOD 3 levels.
 3. Foliage: none in the slice.
-4. If short of 120 at 1440p, set `r.ScreenPercentage 85` and turn off Nanite for the road meshes.
-5. Commit.
+4. Desktop: if short of 120 at 1440p, set `r.ScreenPercentage 85` and turn off Nanite for the road meshes.
+5. Laptop: confirm `stat unit` shows the GeForce, not the integrated GPU (the GPU time will be absurdly high if it is the wrong one; fix in Settings → System → Display → Graphics). If short of 60 at 1080p, set `r.ScreenPercentage 75`, turn off Nanite for the road meshes, and set shadow quality to Medium in Scalability. Plugged in, Best performance power mode.
+6. Commit.
 
 ## 7. Package and record
-1. Platforms → Windows → **Package Project**. Config is already Shipping, staging to `N:\ROCKLAND-GAMES\Builds`.
-2. Launch `Builds\Windows\CantaKart.exe`. Drive one clean lap.
-3. Record 60 seconds with OBS (Display Capture of the game window, 1080p60, MP4) to `N:\ROCKLAND-GAMES\Builds\CantaKart-lap-YYYY-MM-DD.mp4`.
+1. Platforms → Windows → **Package Project**. Config is already Shipping, staging to `<Root>\Builds` (script 03 wrote this machine's path into `DefaultGame.ini`).
+2. Launch `Builds\Windows\CantaKart.exe`. Laptop: first pin it to the GeForce in Settings → System → Display → Graphics (README, MSI laptop notes). Drive one clean lap.
+3. Record 60 seconds with OBS (Display Capture of the game window, 1080p60, MP4) to `<Root>\Builds\CantaKart-lap-YYYY-MM-DD.mp4`. Laptop: use OBS Game Capture of the window and the NVENC encoder so recording does not cost frames.
 4. Do NOT upload the build or the recording anywhere. Stage it and tell Naomi.
 5. Write `Docs\REPORT.md`. Commit.
 
