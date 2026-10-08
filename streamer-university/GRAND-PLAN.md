@@ -1,12 +1,12 @@
-# Little Rock Streamer University: the grand plan
+# Rockland Streamer University: the grand plan
 
-Written 8 Oct 2026 by Fancy in a cloud session. Nothing here is built yet. Naomi decides the name, the price and the date; everything else below is ready to execute.
+Written 8 Oct 2026 by Fancy in a cloud session; name fixed and build started the same day. What is built is listed in README.md next to this file. Cohort 1 is free unless Naomi says otherwise.
 
 ## 1. What it is, in one breath
 
 A school in Berbice that turns ordinary people into working live streamers in six weeks, then gives them a network to stream on. Little Rock already owns the network (Channel 10 live at lrtvs.gy/live, 88.5 Rock FM, LRTVS NewsWatch, the Twitch channels, PINKLAND games) and the know-how (the OBS and Streamlabs recipes, the Twitch kits, the MediaMTX server). The university packages that know-how into lessons and the network into a graduation stage. No other school in Guyana can offer the stage.
 
-Working name: **Little Rock Streamer University** (short: **Streamer U**, handle `streameru`). Alternatives if she prefers: *LRTVS Streamer Academy*, *The Pink Room School*. The school belongs to Little Rock, the family brand. It is never described as founded by Naomi.
+Name, chosen by Naomi on 8 Oct: **Rockland Streamer University** (short: **Rockland Streamer U**, handle `rocklandstreameru`). The school belongs to Little Rock, the family brand. It is never described as founded by Naomi.
 
 ## 2. Who it is for (five tracks, one curriculum)
 
@@ -52,8 +52,8 @@ Everything reuses the Little Rock stack: static HTML on the droplet behind nginx
 | Live classroom | `https://lrtvs.gy/university/live/` | the Channel 10 watch page pointed at a new MediaMTX path `class` |
 | Enrolment form | `https://lrtvs.gy/university/enrol/` | static form posting to a small endpoint on the droplet, writes a CSV, emails Naomi |
 | Graduates wall | `https://lrtvs.gy/university/graduates/` | generated from one JSON file |
-| Class group | GYAFF group "Streamer U Cohort 1" | her own messenger, not WhatsApp |
-| Twitch team | `twitch.tv/team/streameru` | created from the therockfm885 account |
+| Class group | GYAFF group "Rockland Streamer U Cohort 1" | her own messenger, not WhatsApp |
+| Twitch team | `twitch.tv/team/rocklandstreameru` | created from the therockfm885 account |
 | Lesson videos | YouTube, unlisted playlist on the 88.5 or personal channel | recorded in the studio on the MSI |
 | Payments (cohort 2 onward) | Shopify product "Streamer U tuition" | the existing Shopify store |
 

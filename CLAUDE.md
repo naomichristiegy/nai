@@ -14,7 +14,7 @@ If you are running on Windows, you are on one of the two PCs and can run the kit
 
 ## The jobs in this repo
 
-**Streamer U:** `streamer-university/GRAND-PLAN.md` is the launch plan for Little Rock Streamer University, a six-week school in Berbice that teaches people to live stream, with graduation on Little Rock's own network. Read it before touching anything Streamer U.
+**Streamer U:** `streamer-university/GRAND-PLAN.md` is the launch plan for Rockland Streamer University, a six-week school in Berbice that teaches people to live stream, with graduation on Little Rock's own network. Read it before touching anything Streamer U.
 
 **ROCKLAND GAMES:** `rockland-kit/README.md` is the plan. It sets up a Windows PC for ROCKLAND GAMES (Unreal Engine 5, Visual Studio, Git LFS) and builds the CANTA KART vertical slice described in `rockland-kit/CantaKart/VERTICAL-SLICE-PLAN.md`. Run the README steps in order. Nothing in the kit has been executed on either PC yet unless `Docs/REPORT.md` says so.
 

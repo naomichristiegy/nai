@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Enrol at Rockland Streamer University</title><meta name="description" content="Enrol for Cohort 1, free, twenty seats.">
+<meta name="theme-color" content="#FF2D8F"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;800&display=swap"><link rel="stylesheet" href="../style.css"></head>
+<body><div class="rainbow"></div><div class="wrap">
+<header class="top"><a href="../">Rockland Streamer U</a><nav><a href="../#lessons">Lessons</a><a href="../enrol/">Enrol</a><a href="../graduates/">Graduates</a></nav></header>
+<section class="lesson-head"><div class="eyebrow">Cohort 1 · 20 seats · free</div>
+<h1>Enrol</h1><p class="lead">Enrolment opens Monday 19 October. Classes start Saturday 7 November at 10:00 in the Pink Room, Berbice. Fill this in and Little Rock will message you.</p></section>
+<form id="enrol" novalidate>
+<div class="field"><label for="name">Your name</label><input type="text" id="name" name="name" required autocomplete="name"></div>
+<div class="field"><label for="handle">Handle you want to stream as</label><input type="text" id="handle" name="handle" autocomplete="off"><small>Leave blank if you have not picked one. Lesson 2 helps.</small></div>
+<fieldset><legend>Age</legend>
+<label><input type="radio" name="age" value="18+" id="age18" checked> 18 or over</label>
+<label><input type="radio" name="age" value="13-17" id="age13"> 13 to 17, with a guardian</label></fieldset>
+<div class="field" id="guardianField" hidden><label for="guardian">Guardian's name</label><input type="text" id="guardian" name="guardian"><small>The guardian signs the enrolment form and sits in on your first live.</small></div>
+<div class="field"><label for="town">Village or town</label><input type="text" id="town" name="town" autocomplete="address-level2"></div>
+<div class="field"><label for="track">Track</label><select id="track" name="track">
+<option>Gamers</option><option>Hosts</option><option>Live sellers</option><option>Reporters</option><option>Events</option><option>Not sure yet</option></select></div>
+<fieldset><legend>You would stream from</legend>
+<label><input type="checkbox" name="gear" value="phone" id="gphone"> a phone</label>
+<label><input type="checkbox" name="gear" value="laptop" id="glaptop"> a laptop</label>
+<label><input type="checkbox" name="gear" value="studio" id="gstudio"> I would need the Pink Room</label></fieldset>
+<div class="field"><label for="contact">WhatsApp or GYAFF number</label><input type="tel" id="contact" name="contact" required autocomplete="tel"><small>Used only to reach you about the school. Kept on Little Rock's own server, never published.</small></div>
+<div class="field"><label for="why">What do you want to stream, and why?</label><textarea id="why" name="why" maxlength="600"></textarea></div>
+<button class="btn primary" type="submit" id="send">Send my enrolment</button>
+<div class="status" id="status" hidden></div>
+</form>
+<script>
+(function(){
+var f=document.getElementById('enrol'),st=document.getElementById('status'),g=document.getElementById('guardianField');
+function tog(){g.hidden=!document.getElementById('age13').checked}
+document.querySelectorAll('input[name=age]').forEach(function(r){r.addEventListener('change',tog)});tog();
+f.addEventListener('submit',function(e){e.preventDefault();
+ var d=new FormData(f),o={};d.forEach(function(v,k){o[k]=o[k]?o[k]+', '+v:v});
+ if(!o.name||!o.contact){st.hidden=false;st.textContent='Your name and a number to reach you are needed.';return}
+ if(o.age==='13-17'&&!o.guardian){st.hidden=false;st.textContent='Under 18 needs a guardian\'s name.';return}
+ st.hidden=false;st.textContent='Sending…';
+ fetch('submit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(o)})
+ .then(function(r){if(!r.ok)throw 0;return r.json()})
+ .then(function(j){st.textContent='Received. You are number '+j.number+' on the list. Little Rock will message you on that number.';f.querySelector('#send').disabled=true})
+ .catch(function(){st.textContent='The form could not reach the school right now. Message 88.5 Rock FM on Facebook (facebook.com/88.5rockfm) with your name, your track and your number instead.'})
+});
+})();
+</script><footer><p>Rockland Streamer University is a Little Rock school in Berbice, Guyana. Live classes stream on <a href="https://lrtvs.gy/live/">Channel 10 live</a>. Music bed by <a href="https://885rockfm.com">88.5 Rock FM</a>. Part of the <a href="https://lrtvs.gy/">Little Rock directory</a>.</p>
+<p>Family-friendly, always. Pink paint, never gore.</p></footer></div></body></html>

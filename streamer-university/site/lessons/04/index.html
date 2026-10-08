@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Lesson 4: The computer stream</title><meta name="description" content="OBS Studio from zero. Scenes, sources, the stream key, the settings that stop dropped frames.">
+<meta name="theme-color" content="#FF2D8F"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;800&display=swap"><link rel="stylesheet" href="../../style.css"></head>
+<body><div class="rainbow"></div><div class="wrap">
+<header class="top"><a href="../../">Rockland Streamer U</a><nav><a href="../../#lessons">Lessons</a><a href="../../enrol/">Enrol</a><a href="../../graduates/">Graduates</a></nav></header>
+<section class="lesson-head"><div class="eyebrow">Lesson 4 · Week 2 · Self-paced</div>
+<h1>The computer stream</h1><p class="lead">OBS Studio from zero. Scenes, sources, the stream key, the settings that stop dropped frames.</p></section>
+<p>OBS Studio is free and runs on any laptop. Streamlabs is OBS with training wheels; use it if OBS feels like too much. Both do the same job.</p><p>A scene is a screen layout. A source is one thing in it: your camera, your game, a picture, text. You build scenes once and switch between them live.</p><p>Settings for a Berbice connection: Output mode Simple, encoder NVIDIA NVENC if the laptop has a GeForce, otherwise x264 at preset veryfast. Bitrate 2500 kbps on wifi, 4500 on a wire, 6000 only if the speed test shows 10 Mbps upload or more. Resolution 1280x720 at 30 fps to start. Move up only when dropped frames stay at zero.</p><p>The stream key goes in Settings, Stream, pasted from the Twitch dashboard. If anyone sees it, reset it on the dashboard immediately.</p><p>Stats window (View, Stats): dropped frames must stay at zero. If they climb, lower the bitrate by 500 and try again. Wired internet beats wifi every single time.</p>
+<h2>Do it</h2><ol class="steps"><li>Install OBS Studio from obsproject.com.</li><li>Add a scene called Live with your camera and a text source with your name.</li><li>Paste the stream key from the Twitch dashboard. Never type it anywhere else.</li><li>Set 720p30 and 2500 kbps.</li><li>Stream two minutes with the title test, watch Stats, stop.</li></ol>
+<div class="box"><h3>Assignment</h3><p>First OBS stream with the Stats window open. Screenshot Stats showing zero dropped frames.</p></div>
+<h2>Before you post it</h2><ul class="check"><li><label><input type="checkbox" id="c4-0" data-key="rsu-l4-0">OBS installed</label></li><li><label><input type="checkbox" id="c4-1" data-key="rsu-l4-1">Key pasted, never shared</label></li><li><label><input type="checkbox" id="c4-2" data-key="rsu-l4-2">720p30 to start</label></li><li><label><input type="checkbox" id="c4-3" data-key="rsu-l4-3">Zero dropped frames</label></li></ul>
+<p class="note">Ticks stay on this phone only.</p>
+<nav class="pager"><a href="../../lessons/03/">← 3. Audio first</a><a href="../../lessons/05/">5. Scenes and brand →</a></nav>
+<script>
+(function(){var b=document.querySelectorAll('.check input');b.forEach(function(c){try{c.checked=localStorage.getItem(c.dataset.key)==='1'}catch(e){}
+c.addEventListener('change',function(){try{localStorage.setItem(c.dataset.key,c.checked?'1':'0')}catch(e){}})})})();
+</script><footer><p>Rockland Streamer University is a Little Rock school in Berbice, Guyana. Live classes stream on <a href="https://lrtvs.gy/live/">Channel 10 live</a>. Music bed by <a href="https://885rockfm.com">88.5 Rock FM</a>. Part of the <a href="https://lrtvs.gy/">Little Rock directory</a>.</p>
+<p>Family-friendly, always. Pink paint, never gore.</p></footer></div></body></html>
