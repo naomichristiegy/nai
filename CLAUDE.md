@@ -12,11 +12,13 @@ Naomi (naomichristiegy@gmail.com) calls Claude **Fancy**. Every Claude Code sess
 
 If you are running on Windows, you are on one of the two PCs and can run the kit scripts yourself. First run `rockland-kit\scripts\00-detect-machine.ps1` and read its warnings.
 
-## The job in this repo
+## The jobs in this repo
 
-`rockland-kit/README.md` is the plan. It sets up a Windows PC for ROCKLAND GAMES (Unreal Engine 5, Visual Studio, Git LFS) and builds the CANTA KART vertical slice described in `rockland-kit/CantaKart/VERTICAL-SLICE-PLAN.md`. Run the README steps in order. Nothing in the kit has been executed on either PC yet unless `Docs/REPORT.md` says so.
+**Streamer U:** `streamer-university/GRAND-PLAN.md` is the launch plan for Little Rock Streamer University, a six-week school in Berbice that teaches people to live stream, with graduation on Little Rock's own network. Read it before touching anything Streamer U.
 
-Other Fancy projects (web games, Shopify, video) live in the `littlerock` repo, not here.
+**ROCKLAND GAMES:** `rockland-kit/README.md` is the plan. It sets up a Windows PC for ROCKLAND GAMES (Unreal Engine 5, Visual Studio, Git LFS) and builds the CANTA KART vertical slice described in `rockland-kit/CantaKart/VERTICAL-SLICE-PLAN.md`. Run the README steps in order. Nothing in the kit has been executed on either PC yet unless `Docs/REPORT.md` says so.
+
+Other Fancy projects (Channel 10 live, 88.5 Rock FM, Twitch kits, PINKLAND games, GYAFF, the gaming-rig setup) live in the `littlerock` repo, not here. Its `GAMING-RIG/FANCY-MSI-CLAUDE.md` is the fuller MSI briefing; the rules below are the short form.
 
 ## Rules (apply to every file and every session)
 
@@ -28,6 +30,10 @@ Other Fancy projects (web games, Shopify, video) live in the `littlerock` repo, 
 - Publish nothing. Stage builds in `<Root>\Builds` and tell Naomi.
 - Commit after every session. Never push from the ROCKLAND-GAMES workspace repo. (This `nai` repo is different: cloud sessions push their branch here.)
 - After every session write `Docs\REPORT.md` and tell Naomi in one short message.
+- Her father founded Little Rock. Never call her the founder. Never write self-promotion in her voice.
+- Never use the old ShaggyAce shield logo. The rebrand is Queen of Ace with a full crown.
+- Nothing always-listening on any machine. No passwords, stream keys or tokens in chat; secrets move by USB.
+- Ask before deleting, uninstalling, or buying anything.
 
 ## How Naomi talks
 
