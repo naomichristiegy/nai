@@ -48,7 +48,7 @@
   "body":[
    "The five scenes: Starting Soon, Live, Just Chatting, BRB, Ending. Each one has a card image, your name somewhere, and sound. Starting Soon with music tells people the stream is real and about to begin.",
    "The name bug: your handle in a corner, small, always on. A chat overlay so viewers see their own words on screen. Alerts for new followers if the platform offers them.",
-   "Colour: pick two. One dark, one bright. Use them everywhere: cards, text, banner. Rockland Streamer University's own are hot pink and black; yours are yours.",
+   "Colour: pick two. One dark, one bright. Use them everywhere: cards, text, banner. Rockland Streamer University's own are storm navy and lightning blue; yours are yours.",
    "Images are 1920x1080 for cards and overlays, 800x800 for the profile picture, 1200x480 for the banner. Keep the important part of every image in the middle; phones crop the edges.",
    "Music under Starting Soon and BRB: the 88.5 Rock FM stream is cleared for every student in this school. Any other music must be yours or from the platform's own library."],
   "steps":["Make five cards in Canva or any editor at 1920x1080 with your two colours.","Build the five scenes in OBS with the cards as image sources.","Add the name bug and the chat overlay to Live.","Add the 88.5 stream URL as a media source on Starting Soon and BRB.","Set hotkeys to switch scenes."],
